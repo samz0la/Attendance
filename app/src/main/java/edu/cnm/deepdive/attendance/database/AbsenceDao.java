@@ -20,10 +20,10 @@ public interface AbsenceDao {
     @Insert(onConflict = OnConflictStrategy.FAIL)
     List<Long> insert(List<Absence> absences);
 
-    @Query("SELECT * FROM absence ORDER BY start ASC, end ASC")
+    @Query("SELECT * FROM absence ORDER BY start ASC")  //TODO need to update
     List<Student> select();
 
-    @Query("SELECT * FROM students "
+    @Query("SELECT * FROM students " //TODO need to update
         + "WHERE last_name LIKE :pattern OR first_name LIKE :pattern OR display_name LIKE :pattern "
         + "ORDER BY last_name ASC, first_name ASC")
     List<Student> select(String pattern);
