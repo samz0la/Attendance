@@ -11,7 +11,7 @@ import android.support.annotation.NonNull;
     tableName = "students",
     indices = {
         @Index(value = {"last_name", "first_name"}, unique = true),
-        @Index(value = {"display)name"}, unique = true)
+        @Index(value = {"display_name"}, unique = true)
     }
 )
 public class Student {
